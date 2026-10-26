@@ -1,30 +1,32 @@
-const navigationLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
-const sections = navigationLinks.map((link) => document.querySelector(link.hash));
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('#layout-menu a[data-tab]'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.content-section'));
 
-function updateNavigation() {
-  const atBottom = Math.ceil(window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight;
-  let activeId = sections[0].id;
-
-  for (const section of sections) {
-    if (section.getBoundingClientRect().top <= 150) activeId = section.id;
+  function activate(tabName) {
+    if (!tabs.some(function (tab) { return tab.getAttribute('data-tab') === tabName; })) {
+      tabName = 'about';
+    }
+    sections.forEach(function (section) {
+      section.classList.toggle('is-active', section.getAttribute('data-section') === tabName);
+    });
+    tabs.forEach(function (tab) {
+      var selected = tab.getAttribute('data-tab') === tabName;
+      tab.classList.toggle('current', selected);
+      if (selected) tab.setAttribute('aria-current', 'page');
+      else tab.removeAttribute('aria-current');
+    });
   }
-  if (atBottom) activeId = sections[sections.length - 1].id;
 
-  for (const link of navigationLinks) {
-    if (link.hash === `#${activeId}`) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
-  }
-}
-
-let scheduled = false;
-window.addEventListener('scroll', () => {
-  if (scheduled) return;
-  scheduled = true;
-  window.requestAnimationFrame(() => {
-    updateNavigation();
-    scheduled = false;
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function (event) {
+      event.preventDefault();
+      var tabName = tab.getAttribute('data-tab');
+      activate(tabName);
+      window.history.replaceState(null, '', '#' + tabName);
+    });
   });
-}, { passive: true });
-window.addEventListener('resize', updateNavigation);
-window.addEventListener('hashchange', updateNavigation);
-updateNavigation();
+  window.addEventListener('hashchange', function () {
+    activate(window.location.hash.substring(1));
+  });
+  activate(window.location.hash.substring(1));
+}());

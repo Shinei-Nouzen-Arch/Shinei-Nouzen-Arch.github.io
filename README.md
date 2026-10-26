@@ -1,17 +1,19 @@
-# Longwei Liu 的学术主页
+# Longwei Liu 的个人主页
 
-适合 GitHub Pages 的静态网页，无需安装前端框架或运行构建命令。
+参考 <https://baichen318.github.io/> 的 jemdoc 页面布局制作；沿用参考页的 `jemdoc.css`、`middle-layout.css` 和通用 GitHub 图标。无构建依赖，可直接用于 GitHub Pages。
 
 主页地址：<https://shinei-nouzen-arch.github.io/>
 
-## 修改内容
+## 文件
 
-- `index.html`：个人简介、研究方向、教育、工作经历、荣誉及技能。
-- `style.css`：桌面和手机排版、字体与颜色。
-- `main.js`：随滚动更新侧栏当前栏目。
-- `assets/favicon.svg`：浏览器标签图标。
+- `index.html`：个人资料、各栏目和照片预留位置。
+- `jemdoc.css`、`middle-layout.css`：原站的排版样式。
+- `main.js`：侧栏切换和 URL 锚点。
+- `icons/github.png`：GitHub 链接图标。
 
-用浏览器直接打开 `index.html` 即可预览，也可以在此文件夹运行：
+## 本地预览
+
+用浏览器直接打开 `index.html`，或在此文件夹运行：
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
@@ -19,16 +21,15 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 然后访问 <http://127.0.0.1:8000/>。
 
-## 发布
+## 内容约定
 
-仓库名为 `Shinei-Nouzen-Arch.github.io`。在 GitHub 仓库的 Settings → Pages 中选择 Deploy from a branch，分支为 `main`，目录为 `/ (root)`。
+- 保留 About、Publications、Experience、Professional Service，移除 Teaching、Team。
+- 缺少的照片、校徽、简历链接和未提供的栏目内容留空。
+- 只展示已发表的论文。未公开研究的名称、细节、数据和原始简历不加入网页、注释、下载文件或仓库。
+- 若后续需要简历下载，先制作仅包含可公开内容的版本。
 
-修改后提交并推送到 `main`，GitHub Pages 会自动更新。
+## GitHub Pages
 
-## 内容维护约定
+仓库名：`Shinei-Nouzen-Arch.github.io`。
 
-只展示已发表的论文。当前页面未设置论文栏目；有已发表的成果后再添加。
-
-不要把未公开研究的名称、摘要、实验数据或包含这些内容的原始简历加入仓库，包括 HTML 注释和历史提交。如需提供简历下载，请先制作仅包含可公开内容的版本。
-
-页面使用姓名排版，之后可按需加入个人照片。
+在 Settings → Pages 选择 Deploy from a branch，分支 `main`、目录 `/ (root)`。更新内容后提交并推送到 `main`，网页会自动重新发布。

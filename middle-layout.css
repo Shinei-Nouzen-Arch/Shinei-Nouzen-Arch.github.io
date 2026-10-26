@@ -74,6 +74,19 @@ table.profile-header td.profile-info {
   vertical-align: middle;
 }
 
+.profile-quote {
+  text-align: right;
+  line-height: 1.5;
+}
+
+.profile-quote q {
+  cursor: help;
+}
+
+.quote-author {
+  white-space: nowrap;
+}
+
 .team-members {
   display: flex;
   flex-wrap: wrap;

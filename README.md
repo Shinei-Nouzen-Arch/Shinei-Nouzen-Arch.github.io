@@ -1,7 +1,5 @@
 # Longwei Liu 的个人主页
 
-参考 <https://baichen318.github.io/> 的 jemdoc 页面布局制作；沿用参考页的 `jemdoc.css`、`middle-layout.css` 和通用 GitHub 图标。无构建依赖，可直接用于 GitHub Pages。
-
 主页地址：<https://shinei-nouzen-arch.github.io/>
 
 ## 文件

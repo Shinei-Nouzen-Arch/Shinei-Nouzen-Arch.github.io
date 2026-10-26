@@ -9,7 +9,7 @@
 ## 文件
 
 - `index.html`：个人资料、各栏目、照片和导师主页链接。
-- `jemdoc.css`、`middle-layout.css`：原站的排版样式。
+- `jemdoc.css`、`middle-layout.css`：沿用原站样式，并调整照片大小及个人信息间距。
 - `main.js`：侧栏切换和 URL 锚点。
 - `icons/github.png`：GitHub 链接图标。
 - `images/longwei-liu.jpeg`：个人照片，来自[导师团队页面](https://mypage.cuhk.edu.cn/academics/chentinghuan/team.html)中标注为 Longwei Liu 的条目，保留原图比例。

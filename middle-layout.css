@@ -66,6 +66,14 @@ table#tlayout {
   max-width: none;
 }
 
+table.profile-header td.profile-photo {
+  padding-right: 20px;
+}
+
+table.profile-header td.profile-info {
+  vertical-align: middle;
+}
+
 .team-members {
   display: flex;
   flex-wrap: wrap;
@@ -150,6 +158,11 @@ table#tlayout {
 
   table.imgtable td {
     padding-left: 0;
+  }
+
+  table.profile-header td.profile-photo {
+    padding-right: 0;
+    padding-bottom: 16px;
   }
 
   .team-members {

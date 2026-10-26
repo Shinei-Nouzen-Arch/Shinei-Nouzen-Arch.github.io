@@ -2,7 +2,9 @@
 
 参考 <https://baichen318.github.io/> 的 jemdoc 页面布局制作；沿用参考页的 `jemdoc.css`、`middle-layout.css` 和通用 GitHub 图标。无构建依赖，可直接用于 GitHub Pages。
 
-主页地址：<https://shinei-nouzen-arch.github.io/>
+当前仅保留本地版本，网页尚未上传或发布。已创建的 GitHub 仓库为空。
+
+未来发布时的预留地址：<https://shinei-nouzen-arch.github.io/>
 
 ## 文件
 

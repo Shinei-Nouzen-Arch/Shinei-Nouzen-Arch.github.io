@@ -2,9 +2,7 @@
 
 参考 <https://baichen318.github.io/> 的 jemdoc 页面布局制作；沿用参考页的 `jemdoc.css`、`middle-layout.css` 和通用 GitHub 图标。无构建依赖，可直接用于 GitHub Pages。
 
-当前仅保留本地版本，网页尚未上传或发布。已创建的 GitHub 仓库为空。
-
-未来发布时的预留地址：<https://shinei-nouzen-arch.github.io/>
+主页地址：<https://shinei-nouzen-arch.github.io/>
 
 ## 文件
 
@@ -29,8 +27,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 内容约定
 
-- 保留 About、Publications、Experience、Professional Service，移除 Teaching、Team。
-- 缺少的简历链接和未提供的栏目内容留空。
+- 当前导航保留 About、Experience；有实际内容的教育、研究方向、联系信息和获奖信息照常展示。
+- Publications、Professional Service、Selected Talks 等空栏目暂不展示；以后有内容时再添加。Teaching、Team 不展示。
+- 未提供公开简历，不显示简历下载链接。
 - 只展示已发表的论文。未公开研究的名称、细节、数据和原始简历不加入网页、注释、下载文件或仓库。
 - 若后续需要简历下载，先制作仅包含可公开内容的版本。
 

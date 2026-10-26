@@ -1,3 +1,9 @@
+:root {
+  --cuhk-purple: #750f6d;
+  --cuhk-gold: #dda300;
+  --cuhk-light-gold: #f4dfb0;
+}
+
 html {
   background-color: #ffffff; 
 }
@@ -45,21 +51,55 @@ table#tlayout {
 
 #layout-menu {
   position: relative;
+  background-color: #faf7fa;
+  border-color: #e5d9e5;
+}
+
+a, a > tt,
+h1, h2, h3,
+div.menu-category,
+#layout-menu a:link,
+#layout-menu a:visited,
+#layout-menu a:hover {
+  color: var(--cuhk-purple);
+}
+
+h1, h2,
+a:hover {
+  border-bottom-color: var(--cuhk-gold);
+}
+
+#layout-menu a.current:link,
+#layout-menu a.current:visited {
+  color: var(--cuhk-purple);
+  border-bottom: 2px solid var(--cuhk-gold);
+}
+
+div#footer {
+  border-top-color: var(--cuhk-light-gold);
 }
 
 .sidebar-logo {
   position: absolute;
-  top: 50vh;
+  top: max(250px, 50vh);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
+  mix-blend-mode: multiply;
+}
+
+#layout-menu .sidebar-logo a {
+  display: inline-block;
+  margin-left: 0;
+  line-height: 0;
+  border-bottom: none;
 }
 
 .sidebar-logo img {
-  height: 118px;
-  width: auto;
-  max-width: 70%;
+  width: 136px;
+  height: auto;
+  max-width: 100%;
 }
 
 #layout-content {
@@ -158,6 +198,7 @@ table.profile-header td.profile-info {
   }
 
   .sidebar-logo img {
+    width: auto;
     height: 42px;
     max-width: none;
   }

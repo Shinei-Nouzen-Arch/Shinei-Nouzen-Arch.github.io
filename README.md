@@ -9,10 +9,13 @@
 ## 文件
 
 - `index.html`：个人资料、各栏目、照片和导师主页链接。
-- `jemdoc.css`、`middle-layout.css`：沿用原站样式，并调整照片大小及个人信息间距。
+- `jemdoc.css`、`middle-layout.css`：沿用原站布局，调整照片大小及个人信息间距，并使用港中文紫金配色。
 - `main.js`：侧栏切换和 URL 锚点。
 - `icons/github.png`：GitHub 链接图标。
 - `images/longwei-liu.jpeg`：个人照片，来自[导师团队页面](https://mypage.cuhk.edu.cn/academics/chentinghuan/team.html)中标注为 Longwei Liu 的条目，保留原图比例。
+- `images/cuhk-emblem.jpg`：来自[港中文官方校徽介绍页](https://www.cuhk.edu.hk/english/aboutus/mission.html)的[原始校徽图片](https://www.cuhk.edu.hk/english/images/aboutus/logo.jpg)，保留原图比例，链接至港中大（深圳）官网。
+
+配色参考[港中文校徽使用指引](https://www.iso.cuhk.edu.hk/english/documents/resource/cuhk-emblem/emblem-guideline.pdf)：紫色 `#750F6D`、金色 `#DDA300`，浅金色 `#F4DFB0`。标题、链接及导航使用紫色，细线和选中状态使用金色。
 
 ## 本地预览
 
@@ -27,7 +30,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 ## 内容约定
 
 - 保留 About、Publications、Experience、Professional Service，移除 Teaching、Team。
-- 缺少的校徽、简历链接和未提供的栏目内容留空。
+- 缺少的简历链接和未提供的栏目内容留空。
 - 只展示已发表的论文。未公开研究的名称、细节、数据和原始简历不加入网页、注释、下载文件或仓库。
 - 若后续需要简历下载，先制作仅包含可公开内容的版本。
 
